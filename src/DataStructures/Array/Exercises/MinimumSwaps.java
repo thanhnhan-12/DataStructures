@@ -28,7 +28,7 @@ public class MinimumSwaps {
      * 
      */
 
-     public static int minimumSwaps(String brackets) {
+    public static int minimumSwaps(String brackets) {
         int openCount = 0;
         int swaps = 0;
         Stack<Integer> openIndices = new Stack<>();
@@ -49,18 +49,18 @@ public class MinimumSwaps {
             }
         }
 
-        // The number of opening parentheses cannot be equal to the number of closing parentheses
+        // Số dấu ngoặc mở không được bằng số dấu ngoặc đóng
         if (openCount != 0) {
             return -1;
         }
 
-        swaps += openIndices.size(); // number of opening brackets needs to be swapped
+        swaps += openIndices.size(); // Số dấu ngoặc mở còn lại cần swap
 
         return swaps;
     }
 
     public static void main(String[] args) {
-        String brackets = ")())(((0)";
+        String brackets = ")(())(";
         int minimumSwaps = minimumSwaps(brackets);
         System.out.println(minimumSwaps); // Output: 1
     }
