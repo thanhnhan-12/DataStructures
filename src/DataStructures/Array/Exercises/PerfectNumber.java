@@ -6,7 +6,7 @@ public class PerfectNumber {
             return false;
         }
 
-        int sum = 1; // Khởi tạo sum = 1 vì mọi số đều chia hết cho 1
+        int sum = 1; 
 
         for (int i = 2; i * i <= number; i++) {
             if (number % i == 0) {
